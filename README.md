@@ -33,7 +33,7 @@ Lower values:
 Higher values:
 
 * More tolerant movement behaviour
-* Slightly weaker protection against ramp exploits
+* Slightly weaker protection against ramp bugs
 
 Example:
 
@@ -59,7 +59,6 @@ Lower values:
 Higher values:
 
 * Stronger recovery behaviour
-* Can slightly alter edge-case surf physics feel
 
 Example:
 
@@ -91,19 +90,19 @@ momsurffix_enable_noclip_workaround 0
 
 **Default:** `2`
 **Min:** `1`
-**Max:** `MAX_VELOCITY_HISTORY_TICKS_`
+**Max:** `10`
 
 Specifies how many historical movement ticks are considered when restoring player velocity during low-speed ramp corrections.
 
 Lower values:
 
-* Faster correction response
-* Less smoothing
+* More Updated Speed
+* May accidentally set the player to a speed that is lower than intended.
 
 Higher values:
 
-* More stable recovery
-* Slightly increased computational overhead
+* Less recent speed.
+* More likely to atleast give speed.
 
 Example:
 
